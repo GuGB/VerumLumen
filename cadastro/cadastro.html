@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Verum Lumen - Registre-se</title>
+    <link rel="sortcut icon" href="../imagens/favicon-16x16.png" type="image/x-icon" />
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- CSS -->
+    <link href="../node_modules/bootstrap/dist/css/verumlumen.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style type="text/css">
+
+    .panel-body {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center
+    }
+
+    </style>
+
+    <!-- JS -->
+    <script src="../node_modules/jquery/verumlumen.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </head>
+    
+  <body>
+    
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="../paginas/home.html">
+               <img src="../imagens/logosemfundo.png" alt=LOGO width="154" height="55" align="left">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../paginas/home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../paginas/sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../documentarios/documentarios.html">Documentarios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../paginas/apoie.html">Apoie</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item ml-2">
+                  <a class="nav-link" href="../cadastro/login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../cadastro/cadastro.html" class="btn btn-warning">Cadastre-se</a>
+                </li>
+              </ul>
+              <!-- <form class="d-flex">
+                <input class="form-control ml-2 mr-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+              </form> -->
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <!-- CORPO TELA DE CADASTRO -->
+    <main>
+          <div class="container">
+            <center>
+              <img class="mt-3 mb-2" src="../imagens/logo.png" alt="" width="72" height="72">
+              <h3>Cadastre sua conta</h3>
+              <p class="lead">Preencha o formulário abaixo e torne-se parceiro da Verum Lumen! </p>
+              <p class="lead">Nossos parceiros tem acesso a conteúdos exclusivos no site (como entrevistas completas, versões estendidas dos documentários e mais outros benefícios) por apenas <b>R$10,00</b> por mês! Não perca tempo, faça seu cadastro agora mesmo!</p>
+            </center>
+            <font size="2px"><p align="right"><h11> <span style="color: #ff0000;">*</span></h11> Campo Obrigatório </p></font>
+            <h3 align="center"> Dados pessoais</h3><br>
+          </div>
+          <div class="panel-body">
+            <div class="col-md-11 control-label">
+              <form method="POST" id="FormCads" action="recebe.php">
+                <div class="row">
+                  <div class="col-8">
+                    <div class="form-group">
+                      <label for="nome" class="mt-1 mb-2">Nome<span style="color: #ff0000;">*</span></label>
+                      <input id="nome" type="text" class="form-control" placeholder="Nome e Sobrenome" required="">
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="form-group">
+                      <label for="CPF" class="mt-1 mb-2">CPF:<span style="color: #ff0000;">*</span><font size="2px">(com pontos e traço)</font></label>
+                      <input type="text" class="form-control" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Ex.: 000.000.000-00" maxlength="14" required="">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4">
+                    <div class="form-group">
+                      <label for="nascimento" class="mt-1 mb-2">Nascimento:<span style="color: #ff0000;">*</span></label>
+                      <input id="nascimento" class="form-control" type="date" required="">
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                      <label for="telefone" class="mt-1 mb-2">Telefone<span style="color: #ff0000;">*</span><font size="2px">(somente números, com DDD)</font></label>
+                      <input id="telefone" type="text" class="form-control" placeholder="(00) 00000-0000" minlength="10" maxlength="11" required="">
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="form-group">
+                        <label for="sexo" class="mt-1 mb-2">Sexo:<span style="color: #ff0000;">*</span></label> <br>
+                        <input type="radio" id="sexo" name="Sexo" value="Masc" class="radio-inline" for="radios-0" required=""> Masculino
+                        <input type="radio" id="sexo" name="Sexo" value="Fem"class="radio-inline" for="radios-0"> Feminino
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <div class="form-group">
+                        <label for="cep" class="mt-1 mb-2">CEP<span style="color: #ff0000;">*</span><font size="2px">(com traço)</font></label>
+                        <input id="cep" type="text" class="form-control" placeholder="00000-000" pattern="\d{5}-\d{3}" maxlength="9" required="">
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <div class="form-group">
+                      <label for="rua" class="mt-1 mb-2">Rua<span style="color: #ff0000;">*</span></label>
+                      <input id="rua" type="text" class="form-control" placeholder="Nome da rua" required="">
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="form-group">
+                      <label for="numero" class="mt-1 mb-2">Número<span style="color: #ff0000;">*</span></label>
+                      <input id="numero" type="text" class="form-control" placeholder="00" required="">
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="form-group">
+                      <label for="complemento" class="mt-1 mb-2">Complemento:</label>
+                      <input id="complemento" type="text" class="form-control" placeholder="">
+                    </div>
+                  </div>                                         
+                </div>
+                <div class="row">
+                  <div class="col-4">
+                    <div class="form-group">
+                        <label for="bairro" class="mt-1 mb-2">Bairro<span style="color: #ff0000;">*</span></label>
+                        <input id="bairro" type="text" class="form-control" placeholder="Nome do Bairro" required="">
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                        <label for="cidade" class="mt-1 mb-2">Cidade:<span style="color: #ff0000;">*</span></label>
+                        <input id="cidade" type="text" class="form-control" placeholder="Nome da cidade" required="">
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="form-group">
+                      <label for="uf" class="mt-1 mb-2">UF:<span style="color: #ff0000;">*</span></label>
+                      <select id="uf" class="form-control" required>
+                          <option selected hidden>Selecione uma opção</option>
+                          <option value="AC">Acre</option>
+                          <option value="AL">Alagoas</option>
+                          <option value="AP">Amapá</option>
+                          <option value="AM">Amazonas</option>
+                          <option value="BA">Bahia</option>
+                          <option value="CE">Ceará</option>
+                          <option value="DF">Distrito Federal</option>
+                          <option value="ES">Espírito Santo</option>
+                          <option value="GO">Goiás</option>
+                          <option value="MA">Maranhão</option>
+                          <option value="MT">Mato Grosso</option>
+                          <option value="MS">Mato Grosso do Sul</option>
+                          <option value="MG">Minas Gerais</option>
+                          <option value="PA">Pará</option>
+                          <option value="PB">Paraíba</option>
+                          <option value="PR">Paraná</option>
+                          <option value="PE">Pernambuco</option>
+                          <option value="PI">Piauí</option>
+                          <option value="RJ">Rio de Janeiro</option>
+                          <option value="RN">Rio Grande do Norte</option>
+                          <option value="RS">Rio Grande do Sul</option>
+                          <option value="RO">Rondônia</option>
+                          <option value="RR">Roraima</option>
+                          <option value="SC">Santa Catarina</option>
+                          <option value="SP">São Paulo</option>
+                          <option value="SE">Sergipe</option>
+                          <option value="TO">Tocantins</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="email" class="mt-1 mb-2">E-mail:<span style="color: #ff0000;">*</span></label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="seuemail@email.com">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-5">
+                    <div class="form-group">
+                      <label for="senha" class="mt-1 mb-2">Senha:<span style="color: #ff0000;">*</span><font size="2px">(minimo 6 caracteres)</font></label>
+                      <input type="password" class="form-control" id="senha" minlength="6" placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <div class="form-group">
+                      <label for="confsenha" class="mt-1 mb-2">Confirme sua senha:<span style="color: #ff0000;">*</span></label>
+                      <input type="password" class="form-control" id="confsenha" onblur="validarSenha('senha','confsenha')" minlength="6" placeholder="">
+                    </div>
+                  </div>                    
+                </div>
+
+                 <h3 class="mt-3"align="center"> Dados para pagamento</h3><br>
+                  <center>
+                    <div class="row">
+                      <div class="col-lg-6 mx-auto mt-3">
+                        <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <a class="nav-item nav-link active" id="nav-cartao-tab" data-toggle="tab" href="#nav-cartao" role="tab" aria-controls="nav-cartao" aria-selected="true"><i class="fa fa-credit-card"></i> Cartão de Crédito</a>
+                          <!-- <a class="nav-item nav-link" id="nav-boleto-tab" data-toggle="tab" href="#nav-boleto" role="tab" aria-controls="nav-boleto" aria-selected="false"><i class="fa fa-barcode"></i> Boleto Bancário</a> -->
+                        </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                          <div class="tab-pane fade show active" id="nav-cartao" role="tabpanel" aria-labelledby="nav-cartao-tab">
+                            <br><p>O valor final será <b>R$ 120,00</b> feito em 12x sem juros</p>
+                            <div class="form-group mb-1">
+                              <label for="username"> <h6>Nome no cartão</h6> </label> 
+                              <input type="text" name="username" id="nomecartao" placeholder="Nome completo igual está no cartão" required class="form-control "> 
+                            </div>
+                            <div class="form-group mb-1"> 
+                              <label for="cardNumber"> <h6>Número do Cartão</h6> </label>
+                              <div class="input-group"> 
+                                <input type="text" name="cardNumber" id="numerocartao" placeholder="Número do cartão" class="form-control " required>
+                                <div class="input-group-append"> 
+                                  <span class="input-group-text text-muted"> <i class="fa fa-cc-visa mx-1" style="font-size:24px"></i> <i class="fa fa-cc-mastercard mx-1" style="font-size:24px"></i></i></span> 
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-8">
+                                <div class="form-group mb-1"> 
+                                  <label><span class="hidden-xs"><h6>Data de vencimento:</h6></span></label>
+                                  <div class="input-group"> 
+                                    <input type="number" id="mesvenc" placeholder="MÊS" name="" class="form-control mx-1" max="12" required> 
+                                    <input type="number" id="anovenc" placeholder="ANO" name="" class="form-control mx-1" required> 
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-group mb-4 mb-1"> 
+                                  <label data-toggle="tooltip" title="Três dígitos números que ficam atrás do seu cartão"> <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6></label> 
+                                  <input type="text" id="cvv" required class="form-control" maxlength="3"> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="tab-pane fade" id="nav-boleto" role="tabpanel" aria-labelledby="nav-boleto-tab">
+                            <br><p>O valor final será <b>R$ 108,00</b> à vista (você ganha 10% de desconto!)</p><br>
+                           <h5>ATENÇÃO!</h5><br>
+                            <ul>
+                              <li align="justify">A opção do boleto permite apenas o pagamento à vista, mas você ganha desconto!</li>
+                              <li align="justify">Pagamentos de boletos podem levar até 72 hrs para serem compensados</li>
+                              <li align="justify">Até o vencimento você pode pagar em qualquer agência bancária ou casa lotérica</li>
+                              <li align="justify">Finalize o cadastro para gerar o boleto</li>
+                            </ul>
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </center>
+                  <font size="2px"><p align="center" class="mt-2">Ao finalizar meu cadastro, declaro estar de acordo com os <a href="#">Termos de Uso</a> e com a <a href="#">Politica de Prividade</a> da Verum Lumen LTDA</p></font>
+                  <div class="col-lg-6 mx-auto mt-2">
+                    <center><button type="submit" class="btn btn-primary btn-lg btn-block mt-2 md-5" onclick="validarSenha('senha','confsenha')" action="../paginas/home.html">Finalizar cadastro</button></center>
+                  </div>
+              </form>
+            </div>
+          </div>
+
+    </main>
+
+
+        <hr>
+      <!-- FOOTER -->
+
+      <footer class="container">
+        <center>
+            <div class="row justify-content-between">
+              <div class="col-4">
+                <p>&copy; 2021 Verum Lumen, Inc. &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a><br/>
+                Contato: verumlumen@verumlumen.com.br </p>
+              </div>
+              <div class="col-4">
+                <p><b><center><FONT COLOR="#f9bc84">AD MAIOREM DEI GLORIAM</FONT></center></b></p>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <a><img src="../imagens/facebook.png" width="50" height="40"></a>
+                  <a href="https://www.instagram.com/verumlumenoficial/" target="_blank"><img src="../imagens/instagram.png" width="50" height="40"></a>
+                  <a><img src="../imagens/youtube.png" width="50" height="40"></a>
+                </ul>
+              </div>
+          </div>
+        </center>
+      </footer>
+    </main>
+  </body>
+
+</html>
